@@ -12,10 +12,10 @@ class PermissionsController < ApplicationController
   def show
   end
 
-  # GET /permissions/new
-  def new
-    @permission = Permission.new
-  end
+#  # GET /permissions/new
+#  def new
+#    @permission = Permission.new
+#  end
 
   # GET /permissions/1/edit
   def edit
