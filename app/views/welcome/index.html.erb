@@ -1,4 +1,7 @@
 <h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<p>The time is now: <%= Time.now %></p>
+<% if current_user %>
+  <p>Current user methods</p>	
+  <p>current_user.inspect: <%= current_user.inspect %></p>
+  <p>current-user.id: <%= current_user.id %></p>
+<% end %>

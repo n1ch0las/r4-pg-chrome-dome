@@ -1762,3 +1762,494 @@ Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 08:54:22 +01
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 08:54:22 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=ETP5Zdxs9ylZ1obtsH6siQDRL2A3EFkm&oauth_verifier=DcpC2ytoOi9jkRSjkvFUZwEK5c372uvf" for 127.0.0.1 at 2014-08-12 22:12:52 +0100
+
+OAuth::Unauthorized (401 Unauthorized):
+  oauth (0.4.7) lib/oauth/consumer.rb:216:in `token_request'
+  oauth (0.4.7) lib/oauth/tokens/request_token.rb:18:in `get_access_token'
+  omniauth-oauth (1.0.1) lib/omniauth/strategies/oauth.rb:57:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:12:59 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:12:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:12:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:12:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:12:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:12:59 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:12:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:12:59 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:13:03 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:03 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:03 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:03 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:03 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:03 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:03 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:03 +0100
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-08-12 22:13:10 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (291.8ms)
+Completed 200 OK in 359ms (Views: 323.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:11 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:11 +0100
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-08-12 22:13:13 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QuRBP97okqwongX3QZvYVar8H3of8STi8WY0Y07EOOo=", "user"=>{"email"=>"mercy.recommends@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'mercy.recommends@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 38ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QuRBP97okqwongX3QZvYVar8H3of8STi8WY0Y07EOOo=", "user"=>{"email"=>"mercy.recommends@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 118ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:13 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:13 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:13 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:13 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:13 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:13 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:13 +0100
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-08-12 22:13:20 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:21 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:21 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:21 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:21 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:21 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:21 +0100
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-12 22:13:31 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QuRBP97okqwongX3QZvYVar8H3of8STi8WY0Y07EOOo=", "user"=>{"email"=>"nick.holloway@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'nick.holloway@gmail.com' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 176ms (Views: 16.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:32 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:32 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:32 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:32 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:32 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:32 +0100
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-08-12 22:13:40 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:40 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:40 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:13:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:13:40 +0100
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-08-12 22:13:52 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QuRBP97okqwongX3QZvYVar8H3of8STi8WY0Y07EOOo=", "user"=>{"email"=>"nick.holloway@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.holloway@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = 1  [["current_sign_in_at", "2014-08-12 21:13:52.861445"], ["sign_in_count", 2], ["updated_at", "2014-08-12 21:13:52.863628"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 136ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:13:52 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (undefined local variable or method `user_id' for #<#<Class:0x007f91af3853b8>:0x007f91af8d5a70>):
+    4:   <% if current_user %>
+    5:   	<% current_user.inspect %>
+    6:   	<% user_session.inspect %>
+    7:   	<% user_id %>
+    8:   <% end %>	
+    9: </p>
+  app/views/welcome/index.html.erb:7:in `_app_views_welcome_index_html_erb___1224480505502942198_70131845081780'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:14:15 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:14:15 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:14:15 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:15 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:16 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:16 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:14:19 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:14:19 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:14:19 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:19 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:19 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:19 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:19 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:14:47 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:47 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:14:47 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:47 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:48 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:14:48 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:48 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:48 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:14:51 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:14:51 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:51 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:51 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:14:51 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:51 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:51 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:14:51 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:15:33 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:15:33 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:15:33 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:15:33 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:15:33 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:15:33 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:15:33 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:15:33 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:16:37 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:16:37 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:16:37 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:16:37 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:16:37 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:16:37 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:16:37 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:16:37 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-12 22:17:48 +0100
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-12 22:17:49 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-12 22:17:49 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-12 22:17:49 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-12 22:17:49 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-12 22:17:49 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-12 22:17:49 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-12 22:17:49 +0100
