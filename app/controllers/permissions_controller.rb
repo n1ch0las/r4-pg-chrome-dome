@@ -17,9 +17,9 @@ class PermissionsController < ApplicationController
 #    @permission = Permission.new
 #  end
 
-  # GET /permissions/1/edit
-  def edit
-  end
+#  # GET /permissions/1/edit
+#  def edit
+#  end
 
   # POST /permissions
   # POST /permissions.json
