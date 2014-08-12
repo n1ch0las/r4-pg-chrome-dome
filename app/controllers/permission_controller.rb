@@ -1,4 +1,4 @@
-class PermissionsController < ApplicationController
+class PermissionController < ApplicationController
   def index
   end
 

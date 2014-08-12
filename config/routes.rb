@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'permissions/index'
+
+  get 'permissions/create'
+
+  get 'permissions/destroy'
+
+  get 'permission/index'
+
+  get 'permission/create'
+
+  get 'permission/destroy'
+
   get '/auth/:provider/callback', to: 'permissions#create'
   devise_for :users
   root 'welcome#index'
