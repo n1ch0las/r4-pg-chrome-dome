@@ -21,9 +21,8 @@
 				<td><%= image_tag "#{p.profile_image_url}", :size => "32x32" %></td>
 				<td><%= p.url %></td>
 				<td><%= link_to "Remove", permission_destroy_path(:id => p.id), :confirm => 'Are you sure?', :method => :delete %></td>
-				<%# link_to "Remove", authentication, :confirm => 'Are you sure?', :method => :delete, :class => "remove" %>
 			</tr>
 		<% end %>
 	</table>
 <% end %>	
-
+Add 'authenticate to 'Twitter' button
