@@ -19,6 +19,7 @@
 				<td><%= permission.uid %></td>
 				<td><%= permission.name %></td>
 				<td><%= image_tag "#{permission.profile_image_url}", :size => "32x32" %></td>
+				<td><%= permission.url %></td>
 				<td><%= link_to "Destroy", permission, :confirm => 'Are you sure?', :method => :delete %></td>
 			</tr>
 		<% end %>
