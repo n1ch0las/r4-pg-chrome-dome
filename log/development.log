@@ -8044,3 +8044,1226 @@ Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:55:18 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:55:18 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:59:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PermissionController#index as HTML
+Completed 401 Unauthorized in 51ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 316ms (Views: 292.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:40 +0100
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zp+FzaTIxYdKtkwnnP2aooXgO2z5/w2t9EjaAi+4tTQ=", "user"=>{"email"=>"nick.holloway@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.holloway@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["current_sign_in_at", "2014-08-13 19:59:50.534751"], ["last_sign_in_at", "2014-08-13 16:10:27.937565"], ["sign_in_count", 8], ["updated_at", "2014-08-13 19:59:50.537014"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/permission/index
+Completed 302 Found in 154ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 94ms (Views: 39.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:59:50 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:00:14 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=t7CVob7KkPBdq3fhfLKQQs4UwXsLTQZsI1VDUBpQQ&oauth_verifier=Ccn7Z3QJt5QR8bov6TCc1rdPqdBV4BBexeEQIIuUtc" for 127.0.0.1 at 2014-08-13 21:00:21 +0100
+Processing by PermissionController#create as HTML
+  Parameters: {"oauth_token"=>"t7CVob7KkPBdq3fhfLKQQs4UwXsLTQZsI1VDUBpQQ", "oauth_verifier"=>"Ccn7Z3QJt5QR8bov6TCc1rdPqdBV4BBexeEQIIuUtc", "provider"=>"twitter"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."provider" = 'twitter' AND "permissions"."uid" = '12782922' LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "permissions" ("created_at", "name", "profile_image_url", "provider", "token", "token_secret", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-08-13 20:00:24.410791"], ["name", "Nicholas H"], ["profile_image_url", "http://pbs.twimg.com/profile_images/2671435397/fc6a483429c57e7f7927bef66716c2ff_normal.png"], ["provider", "twitter"], ["token", "12782922-asTgKSYGg0ylfBGRfWdLwjprFqTJrtQWv8tNGR5Nl"], ["token_secret", "FnCkg99LvTP9W7linKFo3UzhrG3Oe12bd7SnLs2A22vgx"], ["uid", "12782922"], ["updated_at", "2014-08-13 20:00:24.410791"], ["user_id", 1]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  Rendered permission/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 59ms (Views: 10.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:00:24 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.5ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 62ms (Views: 27.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:01:14 +0100
+
+
+Started DELETE "/permission/destroy?id=2" for 127.0.0.1 at 2014-08-13 21:01:25 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sgdzmoLM0YH/zk1CXEkfI0qjwTcwlAGYUPum5Bd79Pk=", "id"=>"2"}
+  [1m[35mUser Load (10.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "permissions" WHERE "permissions"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed 500 Internal Server Error in 29ms
+
+NameError (undefined local variable or method `permissions_index' for #<PermissionController:0x007ffddb66d5b0>):
+  app/controllers/permission_controller.rb:33:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.4ms)
+
+
+Started GET "/permission/" for 127.0.0.1 at 2014-08-13 21:02:25 +0100
+
+ActionController::RoutingError (No route matches [GET] "/permission"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.3ms)
+
+
+Started GET "/permissions" for 127.0.0.1 at 2014-08-13 21:02:28 +0100
+
+ActionController::RoutingError (uninitialized constant PermissionsController):
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.2ms)
+
+
+Started GET "/permission" for 127.0.0.1 at 2014-08-13 21:02:31 +0100
+
+ActionController::RoutingError (No route matches [GET] "/permission"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.9ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 21:02:35 +0100
+
+ActionController::RoutingError (No route matches [GET] "/permission/index"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.2ms)
+
+
+Started GET "/permissions" for 127.0.0.1 at 2014-08-13 21:02:53 +0100
+
+ActionController::RoutingError (uninitialized constant PermissionsController):
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (90.1ms)
+
+
+Started GET "/permissions" for 127.0.0.1 at 2014-08-13 21:02:53 +0100
+
+ActionController::RoutingError (uninitialized constant PermissionsController):
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.4) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.8ms)
+
+
+Started GET "/permissions" for 127.0.0.1 at 2014-08-13 21:03:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/permissions"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.8ms)
+
+
+Started GET "/permission" for 127.0.0.1 at 2014-08-13 21:03:05 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.5ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 54ms (Views: 15.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:03:06 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:03:19 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:03:20 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=ejZpMGHPf62H5ZeyzD9CCCudwJWBclQK&oauth_verifier=wqb86xv8c2JMgT8dsHRJ6m4Dj8x7fbHa" for 127.0.0.1 at 2014-08-13 21:03:26 +0100
+Processing by PermissionController#create as HTML
+  Parameters: {"oauth_token"=>"ejZpMGHPf62H5ZeyzD9CCCudwJWBclQK", "oauth_verifier"=>"wqb86xv8c2JMgT8dsHRJ6m4Dj8x7fbHa", "provider"=>"twitter"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.5ms)[0m  SELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."provider" = 'twitter' AND "permissions"."uid" = '12782922' LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "permissions" ("created_at", "name", "profile_image_url", "provider", "token", "token_secret", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-08-13 20:03:28.765567"], ["name", "Nicholas H"], ["profile_image_url", "http://pbs.twimg.com/profile_images/2671435397/fc6a483429c57e7f7927bef66716c2ff_normal.png"], ["provider", "twitter"], ["token", "12782922-asTgKSYGg0ylfBGRfWdLwjprFqTJrtQWv8tNGR5Nl"], ["token_secret", "FnCkg99LvTP9W7linKFo3UzhrG3Oe12bd7SnLs2A22vgx"], ["uid", "12782922"], ["updated_at", "2014-08-13 20:03:28.765567"], ["user_id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 32ms
+
+NameError (undefined local variable or method `permissions_index' for #<PermissionController:0x007ffdd8c2b7e8>):
+  app/controllers/permission_controller.rb:26:in `create'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.8ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:03:59 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:04:01 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=3LNce8swhVw6L8Wcz4sbaO7QqoTVReohWEmjktGw&oauth_verifier=g6mQWoT8rTyCqZs7Gc3TAm04xnHxgvhVkzBPfRBQU" for 127.0.0.1 at 2014-08-13 21:04:07 +0100
+Processing by PermissionController#create as HTML
+  Parameters: {"oauth_token"=>"3LNce8swhVw6L8Wcz4sbaO7QqoTVReohWEmjktGw", "oauth_verifier"=>"g6mQWoT8rTyCqZs7Gc3TAm04xnHxgvhVkzBPfRBQU", "provider"=>"twitter"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.6ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."provider" = 'twitter' AND "permissions"."uid" = '12782922' LIMIT 1[0m  [["user_id", 1]]
+  Rendered permission/create.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 61ms (Views: 11.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:04:11 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=3LNce8swhVw6L8Wcz4sbaO7QqoTVReohWEmjktGw&oauth_verifier=g6mQWoT8rTyCqZs7Gc3TAm04xnHxgvhVkzBPfRBQU" for 127.0.0.1 at 2014-08-13 21:07:07 +0100
+
+OAuth::Unauthorized (401 Unauthorized):
+  oauth (0.4.7) lib/oauth/consumer.rb:216:in `token_request'
+  oauth (0.4.7) lib/oauth/tokens/request_token.rb:18:in `get_access_token'
+  omniauth-oauth (1.0.1) lib/omniauth/strategies/oauth.rb:57:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 34ms (Views: 27.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:11 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:07:16 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:07:17 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=RofnR3ph5VA2LBgf71jQh7yUKdfgZ5lI&oauth_verifier=RGkgIO59JDxQOTC5ECLZ5SVCpA7f4WCJ" for 127.0.0.1 at 2014-08-13 21:07:24 +0100
+Processing by PermissionController#create as HTML
+  Parameters: {"oauth_token"=>"RofnR3ph5VA2LBgf71jQh7yUKdfgZ5lI", "oauth_verifier"=>"RGkgIO59JDxQOTC5ECLZ5SVCpA7f4WCJ", "provider"=>"twitter"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.6ms)[0m  SELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."provider" = 'twitter' AND "permissions"."uid" = '12782922' LIMIT 1  [["user_id", 1]]
+  Rendered permission/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 61ms (Views: 13.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:07:28 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:08:03 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:08:05 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=oShdXUTrhmkYmjUsHH4hyNk4VpRvX5SS1eWqcu9A&oauth_verifier=0ygflEEynLblcA8SFCnS3d3FrvwnfybVMqTSaXxZOb8" for 127.0.0.1 at 2014-08-13 21:08:12 +0100
+Processing by PermissionController#create as HTML
+  Parameters: {"oauth_token"=>"oShdXUTrhmkYmjUsHH4hyNk4VpRvX5SS1eWqcu9A", "oauth_verifier"=>"0ygflEEynLblcA8SFCnS3d3FrvwnfybVMqTSaXxZOb8", "provider"=>"twitter"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.4ms)[0m  SELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."provider" = 'twitter' AND "permissions"."uid" = '12782922' LIMIT 1  [["user_id", 1]]
+  Rendered permission/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 57ms (Views: 10.4ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:15 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:08:43 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:08:45 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=A6zx2ClAlPTVV5KI8gF7VrGTWYAgNkod&oauth_verifier=vl9Dount2AptzESl5Ew3hd4Q6KwgEPDc" for 127.0.0.1 at 2014-08-13 21:08:51 +0100
+Processing by PermissionController#create as HTML
+  Parameters: {"oauth_token"=>"A6zx2ClAlPTVV5KI8gF7VrGTWYAgNkod", "oauth_verifier"=>"vl9Dount2AptzESl5Ew3hd4Q6KwgEPDc", "provider"=>"twitter"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.5ms)[0m  SELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."provider" = 'twitter' AND "permissions"."uid" = '12782922' LIMIT 1  [["user_id", 1]]
+  Rendered permission/create.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 65ms (Views: 11.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:08:54 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 21:09:30 +0100
+
+AbstractController::ActionNotFound (The action 'show' could not be found for PermissionController):
+  actionpack (4.1.4) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.4) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.4) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.4) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.9ms)
+
+
+Started GET "/permissions/index" for 127.0.0.1 at 2014-08-13 21:09:36 +0100
+
+ActionController::RoutingError (No route matches [GET] "/permissions/index"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.7ms)
+
+
+Started GET "/permission" for 127.0.0.1 at 2014-08-13 21:09:44 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.5ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (46.3ms)
+Completed 500 Internal Server Error in 81ms
+
+ActionView::Template::Error (undefined method `permission_destroy_path' for #<#<Class:0x007ffddca79dd8>:0x007ffddca791d0>):
+    20: 				<td><%= p.name %></td>
+    21: 				<td><%= image_tag "#{p.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= p.url %></td>
+    23: 				<td><%= link_to "Remove", permission_destroy_path(:id => p.id), :confirm => 'Are you sure?', :method => :delete %></td>
+    24: 				<%# link_to "Remove", authentication, :confirm => 'Are you sure?', :method => :delete, :class => "remove" %>
+    25: 			</tr>
+    26: 		<% end %>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb__871046118075753113_70364125188540'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb__871046118075753113_70364125188540'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.9ms)
+
+
+Started GET "/permission" for 127.0.0.1 at 2014-08-13 21:11:00 +0100
+
+ActionController::RoutingError (No route matches [GET] "/permission"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.7ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.4ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 57ms (Views: 26.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:11:32 +0100
+
+
+Started DELETE "/permission/destroy?id=3" for 127.0.0.1 at 2014-08-13 21:11:36 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sgdzmoLM0YH/zk1CXEkfI0qjwTcwlAGYUPum5Bd79Pk=", "id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.5ms)[0m  SELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."id" = $2 LIMIT 1  [["user_id", 1], ["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "permissions" WHERE "permissions"."id" = $1  [["id", 3]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 17ms
+
+NameError (undefined local variable or method `permission_index' for #<PermissionController:0x007ffdd8f64d10>):
+  app/controllers/permission_controller.rb:33:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.6ms)
+
+
+Started DELETE "/permission/destroy?id=3" for 127.0.0.1 at 2014-08-13 21:11:55 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sgdzmoLM0YH/zk1CXEkfI0qjwTcwlAGYUPum5Bd79Pk=", "id"=>"3"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.3ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 3]]
+Completed 404 Not Found in 35ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission with 'id'=3 [WHERE "permissions"."user_id" = $1]):
+  app/controllers/permission_controller.rb:31:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.2ms)
+
+
+Started DELETE "/permission/destroy?id=3" for 127.0.0.1 at 2014-08-13 21:12:06 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sgdzmoLM0YH/zk1CXEkfI0qjwTcwlAGYUPum5Bd79Pk=", "id"=>"3"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.5ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 3]]
+Completed 404 Not Found in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission with 'id'=3 [WHERE "permissions"."user_id" = $1]):
+  app/controllers/permission_controller.rb:31:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.2ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:12:12 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:12:18 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 21:12:19 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=ITaWvrgAUSLxNhtVMB0ISKlZUpjT1B9Y&oauth_verifier=mzgFLLMU5H5PvLVWZk1NtS5dguSOMocI" for 127.0.0.1 at 2014-08-13 21:14:14 +0100
+Processing by PermissionController#create as HTML
+  Parameters: {"oauth_token"=>"ITaWvrgAUSLxNhtVMB0ISKlZUpjT1B9Y", "oauth_verifier"=>"mzgFLLMU5H5PvLVWZk1NtS5dguSOMocI", "provider"=>"twitter"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."provider" = 'twitter' AND "permissions"."uid" = '12782922' LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "permissions" ("created_at", "name", "profile_image_url", "provider", "token", "token_secret", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-08-13 20:14:16.319946"], ["name", "Nicholas H"], ["profile_image_url", "http://pbs.twimg.com/profile_images/2671435397/fc6a483429c57e7f7927bef66716c2ff_normal.png"], ["provider", "twitter"], ["token", "12782922-asTgKSYGg0ylfBGRfWdLwjprFqTJrtQWv8tNGR5Nl"], ["token_secret", "FnCkg99LvTP9W7linKFo3UzhrG3Oe12bd7SnLs2A22vgx"], ["uid", "12782922"], ["updated_at", "2014-08-13 20:14:16.319946"], ["user_id", 1]]
+  [1m[35m (1.8ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/permission/index
+Completed 302 Found in 26ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.3ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 21:14:16 +0100

@@ -23,12 +23,13 @@ class PermissionController < ApplicationController
         #:url => auth['urls'] # Needs work
         # auth hash schema https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema
       )
+      redirect_to permission_index_path
     end
   end
 
   def destroy
     @permission = current_user.permissions.find(params[:id])
     @permission.destroy
-    redirect_to permissions_index
+    redirect_to permission_index_path
   end
 end
