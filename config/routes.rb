@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   get 'permission/index'
-
-  get 'permission/destroy'
+  delete 'permission/destroy'
 
   get '/auth/:provider/callback', to: 'permission#create'
  

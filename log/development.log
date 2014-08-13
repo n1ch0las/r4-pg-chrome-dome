@@ -6805,3 +6805,1242 @@ ActionView::Template::Error (undefined method `permission_path' for #<#<Class:0x
   Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
   Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
   Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.6ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 17:56:08 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered permission/index.html.erb within layouts/application (91.2ms)
+Completed 500 Internal Server Error in 100ms
+
+SyntaxError (/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:24: syntax error, unexpected '<'
+			</tr>
+			 ^
+/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:26: unknown regexp options - tabl
+/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:29: unterminated string meets end of file
+/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:29: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/permission/index.html.erb:24: syntax error, unexpected '<'
+  app/views/permission/index.html.erb:26: unknown regexp options - tabl
+  app/views/permission/index.html.erb:29: unterminated string meets end of file
+  app/views/permission/index.html.erb:29: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.4ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.5ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 17:56:35 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 19:21:56 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.4ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 18ms (Views: 12.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 19:21:56 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 19:21:56 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 19:21:56 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 19:21:56 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 19:21:56 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 19:21:56 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 19:21:56 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 19:21:57 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 19:21:57 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 19:21:57 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 19:37:47 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.5ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (46.2ms)
+Completed 500 Internal Server Error in 80ms
+
+ActionView::Template::Error (undefined local variable or method `permission_destroy' for #<#<Class:0x007fcd6ee2f1b0>:0x007fcd6ee2e418>):
+    20: 				<td><%= permission.name %></td>
+    21: 				<td><%= image_tag "#{permission.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= permission.url %></td>
+    23: 				<td><%= link_to "Destroy", permission_destroy, :confirm => 'Are you sure?', :method => :delete %>Remove</td>
+    24: 			</tr>
+    25: 		<% end %>
+    26: 	</table>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb___2317024240118950335_70260152690320'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb___2317024240118950335_70260152690320'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.5ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:30 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:31 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:31 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:31 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 19:38:31 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.4ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 19:39:01 +0100
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 19:39:08 +0100
+
+ActionController::RoutingError (No route matches [DELETE] "/permission/destroy"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.7ms)
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 19:39:35 +0100
+
+ActionController::RoutingError (No route matches [DELETE] "/permission/destroy"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.1ms)
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 19:43:18 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 404 Not Found in 45ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:30:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.9ms)
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 19:45:20 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 30ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:30:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 19:45:54 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.3ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 63ms (Views: 28.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 19:45:55 +0100
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 19:45:56 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.5ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `destroy' for #<String:0x007fcd6ceef930>):
+  app/controllers/permission_controller.rb:32:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.2ms)
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 19:46:18 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.3ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/destroy.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 57ms (Views: 11.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 19:46:18 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 19:46:19 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 19:46:19 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 19:46:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 19:46:19 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 19:46:19 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 19:46:19 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 19:46:19 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 19:46:19 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 19:46:19 +0100
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.4ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/destroy.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 13.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 19:53:40 +0100
+
+
+Started GET "/permission/" for 127.0.0.1 at 2014-08-13 20:02:59 +0100
+
+ActionController::RoutingError (No route matches [GET] "/permission"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.0ms)
+
+
+Started GET "/permission/" for 127.0.0.1 at 2014-08-13 20:03:07 +0100
+
+ActionController::RoutingError (No route matches [GET] "/permission"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.7ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:03:10 +0100
+
+SyntaxError (/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/controllers/permission_controller.rb:34: syntax error, unexpected keyword_end, expecting ']'):
+  app/controllers/permission_controller.rb:34: syntax error, unexpected keyword_end, expecting ']'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:04:29 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.4ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (50.0ms)
+Completed 500 Internal Server Error in 84ms
+
+ActionView::Template::Error (undefined method `permission_path' for #<#<Class:0x007fcd6a31b2a0>:0x007fcd6a31a6e8>):
+    20: 				<td><%= permission.name %></td>
+    21: 				<td><%= image_tag "#{permission.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= permission.url %></td>
+    23: 				<td><%= link_to "Remove", permission, :confirm => 'Are you sure?', :method => :delete %></td>
+    24: 			</tr>
+    25: 		<% end %>
+    26: 	</table>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb___2317024240118950335_70260113328520'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb___2317024240118950335_70260113328520'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.3ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:10:19 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered permission/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:25: syntax error, unexpected '<', expecting ')'
+			</tr>
+			 ^
+/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:27: unknown regexp options - tabl
+unmatched close parenthesis: /tr>
+		<% end );@output_buffer.safe_append='
+	</
+/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:30: unterminated string meets end of file
+/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:30: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/permission/index.html.erb:25: syntax error, unexpected '<', expecting ')'
+  app/views/permission/index.html.erb:27: unknown regexp options - tabl
+  app/views/permission/index.html.erb:30: unterminated string meets end of file
+  app/views/permission/index.html.erb:30: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.6ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:10:31 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.4ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (undefined method `permission_path' for #<#<Class:0x007fcd6a31b2a0>:0x007fcd6e978590>):
+    20: 				<td><%= permission.name %></td>
+    21: 				<td><%= image_tag "#{permission.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= permission.url %></td>
+    23: 				<td><%= link_to "Remove", permission, :confirm => 'Are you sure?', :method => :delete %></td>
+    24: 				<%= link_to "Remove", authentication, :confirm => 'Are you sure?', :method => :delete, :class => "remove" %>
+    25: 			</tr>
+    26: 		<% end %>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb___2317024240118950335_70260150031900'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb___2317024240118950335_70260150031900'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:11:53 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.3ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (32.8ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (undefined local variable or method `authentication' for #<#<Class:0x007fcd6a31b2a0>:0x007fcd6a57ca08>):
+    21: 				<td><%= image_tag "#{permission.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= permission.url %></td>
+    23: 				<td><%= link_to "Remove", @permission, :confirm => 'Are you sure?', :method => :delete %></td>
+    24: 				<%= link_to "Remove", authentication, :confirm => 'Are you sure?', :method => :delete, :class => "remove" %>
+    25: 			</tr>
+    26: 		<% end %>
+    27: 	</table>
+  app/views/permission/index.html.erb:24:in `block in _app_views_permission_index_html_erb___2317024240118950335_70260114569420'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb___2317024240118950335_70260114569420'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.1ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:13:11 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (1.2ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (34.4ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (undefined local variable or method `permission' for #<#<Class:0x007fcd6a31b2a0>:0x007fcd6ec36228>):
+    20: 				<td><%= p.name %></td>
+    21: 				<td><%= image_tag "#{p.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= p.url %></td>
+    23: 				<td><%= link_to "Remove", permission, :confirm => 'Are you sure?', :method => :delete %></td>
+    24: 				<%= link_to "Remove", authentication, :confirm => 'Are you sure?', :method => :delete, :class => "remove" %>
+    25: 			</tr>
+    26: 		<% end %>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb___2317024240118950335_70260151658040'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb___2317024240118950335_70260151658040'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:14:42 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.7ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (36.8ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (undefined local variable or method `authentication' for #<#<Class:0x007fcd6a31b2a0>:0x007fcd6e9cafe8>):
+    21: 				<td><%= image_tag "#{p.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= p.url %></td>
+    23: 				<td><%= link_to "Remove", @permission, :confirm => 'Are you sure?', :method => :delete %></td>
+    24: 				<%= link_to "Remove", authentication, :confirm => 'Are you sure?', :method => :delete, :class => "remove" %>
+    25: 			</tr>
+    26: 		<% end %>
+    27: 	</table>
+  app/views/permission/index.html.erb:24:in `block in _app_views_permission_index_html_erb___2317024240118950335_70260150389820'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb___2317024240118950335_70260150389820'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:16:20 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.8ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (40.3ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (undefined local variable or method `permission' for #<#<Class:0x007fcd6a31b2a0>:0x007fcd6cfb1af8>):
+    20: 				<td><%= p.name %></td>
+    21: 				<td><%= image_tag "#{p.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= p.url %></td>
+    23: 				<td><%= link_to "Remove", permission, :confirm => 'Are you sure?', :method => :delete %></td>
+    24: 				<%# link_to "Remove", authentication, :confirm => 'Are you sure?', :method => :delete, :class => "remove" %>
+    25: 			</tr>
+    26: 		<% end %>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb___2317024240118950335_70260136706620'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb___2317024240118950335_70260136706620'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.4ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:43:00 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.3ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:43:01 +0100
+
+
+Started DELETE "/permission/destroy.1" for 127.0.0.1 at 2014-08-13 20:43:04 +0100
+Processing by PermissionController#destroy as 
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.4ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+Completed 500 Internal Server Error in 20ms
+
+NoMethodError (undefined method `permission' for #<User:0x007fcd6a081ee0>):
+  app/controllers/permission_controller.rb:31:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+
+
+Started DELETE "/permission/destroy.1" for 127.0.0.1 at 2014-08-13 20:44:16 +0100
+Processing by PermissionController#destroy as 
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 31ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:30:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started DELETE "/permission/destroy.1" for 127.0.0.1 at 2014-08-13 20:44:57 +0100
+Processing by PermissionController#destroy as 
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:30:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.7ms)
+
+
+Started DELETE "/permission/destroy.1" for 127.0.0.1 at 2014-08-13 20:45:20 +0100
+Processing by PermissionController#destroy as 
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:30:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.5ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.3ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:46:24 +0100
+
+
+Started DELETE "/permission/index" for 127.0.0.1 at 2014-08-13 20:46:27 +0100
+
+ActionController::RoutingError (No route matches [DELETE] "/permission/index"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.4ms)
+
+
+Started DELETE "/permission/index" for 127.0.0.1 at 2014-08-13 20:47:05 +0100
+
+ActionController::RoutingError (No route matches [DELETE] "/permission/index"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/O_v_O/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.8ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.4ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:47:12 +0100
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 20:47:14 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:30:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 20:51:48 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:30:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.1ms)
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-13 20:51:52 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U="}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:30:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.2ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.3ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:51:59 +0100
+
+
+Started DELETE "/permission/destroy?id=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U=", "id"=>"1"}
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+  Rendered permission/destroy.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 10.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:06 +0100
+
+
+Started DELETE "/permission/destroy?id=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U=", "id"=>"1"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.5ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+  Rendered permission/destroy.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:52:23 +0100
+
+
+Started DELETE "/permission/destroy?id=1" for 127.0.0.1 at 2014-08-13 20:53:21 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U=", "id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."id" = $2 LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "permissions" WHERE "permissions"."id" = $1[0m  [["id", 1]]
+  [1m[35m (27.0ms)[0m  COMMIT
+Completed 500 Internal Server Error in 95ms
+
+NameError (undefined local variable or method `permissions_url' for #<PermissionController:0x007fcd6acefad8>):
+  app/controllers/permission_controller.rb:32:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.9ms)
+
+
+Started DELETE "/permission/destroy?id=1" for 127.0.0.1 at 2014-08-13 20:53:58 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JBZc/jKbvkxXo1rhu4XzfbzBN41S794UbsKda0r012U=", "id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (0.4ms)[0m  SELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."id" = $2 LIMIT 1  [["user_id", 1], ["id", 1]]
+Completed 404 Not Found in 33ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission with 'id'=1 [WHERE "permissions"."user_id" = $1]):
+  app/controllers/permission_controller.rb:30:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.9ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.4ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:54:14 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 20:55:17 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (1.5ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 20:55:17 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 20:55:17 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 20:55:17 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 20:55:17 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 20:55:17 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 20:55:17 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 20:55:18 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 20:55:18 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 20:55:18 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 20:55:18 +0100

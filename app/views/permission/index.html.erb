@@ -12,15 +12,16 @@
 			<th>Image</th>
 			<th>URL</th>
 		</tr>
-		<% for permission in @permissions %>
+		<% for p in @permissions %>
 			<tr>
-				<td><%= permission.user_id %></td>
-				<td><%= permission.provider %></td>
-				<td><%= permission.uid %></td>
-				<td><%= permission.name %></td>
-				<td><%= image_tag "#{permission.profile_image_url}", :size => "32x32" %></td>
-				<td><%= permission.url %></td>
-				<td><%=# link_to "Destroy", permission_destroy, :confirm => 'Are you sure?', :method => :delete %>Destroy link to do</td>
+				<td><%= p.user_id %></td>
+				<td><%= p.provider %></td>
+				<td><%= p.uid %></td>
+				<td><%= p.name %></td>
+				<td><%= image_tag "#{p.profile_image_url}", :size => "32x32" %></td>
+				<td><%= p.url %></td>
+				<td><%= link_to "Remove", permission_destroy_path(:id => p.id), :confirm => 'Are you sure?', :method => :delete %></td>
+				<%# link_to "Remove", authentication, :confirm => 'Are you sure?', :method => :delete, :class => "remove" %>
 			</tr>
 		<% end %>
 	</table>

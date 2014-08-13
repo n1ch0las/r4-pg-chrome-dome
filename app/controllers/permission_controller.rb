@@ -13,7 +13,7 @@ class PermissionController < ApplicationController
     if permission
       puts "Exists. Nothing to action."
     else
-      new_perm = current_user.permissions.create(
+      current_user.permissions.create(
         :name => auth['info']['name'],
         :profile_image_url => auth['info']['image'],
         :provider => auth['provider'],
@@ -27,5 +27,8 @@ class PermissionController < ApplicationController
   end
 
   def destroy
+    @permission = current_user.permissions.find(params[:id])
+    @permission.destroy
+    redirect_to permissions_index
   end
 end
