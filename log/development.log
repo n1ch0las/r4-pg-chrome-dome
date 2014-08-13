@@ -4401,3 +4401,93 @@ Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 14:47:38 +01
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 14:47:38 +0100
+
+
+Started GET "/permissions" for 127.0.0.1 at 2014-08-13 14:49:35 +0100
+Processing by PermissionsController#index as HTML
+Completed 401 Unauthorized in 35ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-08-13 14:49:35 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (57.4ms)
+Completed 200 OK in 115ms (Views: 80.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:36 +0100
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-08-13 14:49:42 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+x5mhLz5kOPZHimYRUfspY1uAYrLYpDfgos3Muw01Y=", "user"=>{"email"=>"nick.holloway@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (103.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'nick.holloway@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.1ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["current_sign_in_at", "2014-08-13 13:49:42.950211"], ["last_sign_in_at", "2014-08-13 04:52:21.161403"], ["sign_in_count", 5], ["updated_at", "2014-08-13 13:49:42.952447"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/permissions
+Completed 302 Found in 290ms (ActiveRecord: 118.3ms)
+
+
+Started GET "/permissions" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+Processing by PermissionsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered permissions/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/permissions.css?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+
+
+Started GET "/assets/permissions.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 14:49:43 +0100
