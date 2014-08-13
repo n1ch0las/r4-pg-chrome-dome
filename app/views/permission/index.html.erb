@@ -1,22 +1,27 @@
 <h1>Permission#index</h1>
 <p>Find me in app/views/permission/index.html.erb</p>
-<table>
-  <tr>
-    <th>User</th>
-    <th>Provider</th>
-    <th>Uid</th>
-    <th>Name</th>
-    <th>Image</th>
-    <th>URL</th>
-  </tr>
-  <% for permission in @permissions %>
-    <tr>
-      <td><%= permission.user_id %></td>
-      <td><%= permission.provider %></td>
-      <td><%= permission.uid %></td>
-      <td><%= permission.name %></td>
-      <td><%= image_tag "#{permission.image}", :size => "32x32" %></td>
-      <td><%= link_to "Destroy", permission, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<%if @permissions.empty? %>
+	No permissions to display
+<% else %>	
+	<table>
+		<tr>
+			<th>User</th>
+			<th>Provider</th>
+			<th>Uid</th>
+			<th>Name</th>
+			<th>Image</th>
+			<th>URL</th>
+		</tr>
+		<% for permission in @permissions %>
+			<tr>
+				<td><%= permission.user_id %></td>
+				<td><%= permission.provider %></td>
+				<td><%= permission.uid %></td>
+				<td><%= permission.name %></td>
+				<td><%= image_tag "#{permission.image}", :size => "32x32" %></td>
+				<td><%= link_to "Destroy", permission, :confirm => 'Are you sure?', :method => :delete %></td>
+			</tr>
+		<% end %>
+	</table>
+<% end %>	
+
