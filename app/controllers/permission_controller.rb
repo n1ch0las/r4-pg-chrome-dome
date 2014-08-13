@@ -14,12 +14,14 @@ class PermissionController < ApplicationController
       puts "Exists. Nothing to action."
     else
       new_perm = current_user.permissions.create(
-        :provider => auth['provider'],
-        :uid => auth['uid'],
-        :token => auth['credentials']['token'],
-        :secret => auth['credentials']['secret'],
         :name => auth['info']['name'],
-        :image => auth['info']['image']
+        :profile_image_url => auth['info']['image'],
+        :provider => auth['provider'],
+        :token => auth['credentials']['token'],
+        :token_secret => auth['credentials']['secret'],
+        :uid => auth['uid'],
+        #:url => auth['urls'] # Needs work
+        # auth hash schema https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema
       )
     end
   end
