@@ -6735,3 +6735,73 @@ ActiveRecord::UnknownAttributeError (unknown attribute: secret):
   Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
   Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.8ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-13 17:49:05 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=WUjUqrVbEisYmbhZxzlOW5kXSu24RFhy&oauth_verifier=K0VCz1Dlw5Vs8M9SnlvlQ0UytOfKrbEx" for 127.0.0.1 at 2014-08-13 17:49:10 +0100
+Processing by PermissionController#create as HTML
+  Parameters: {"oauth_token"=>"WUjUqrVbEisYmbhZxzlOW5kXSu24RFhy", "oauth_verifier"=>"K0VCz1Dlw5Vs8M9SnlvlQ0UytOfKrbEx", "provider"=>"twitter"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Load (0.4ms)[0m  [1mSELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."provider" = 'twitter' AND "permissions"."uid" = '12782922' LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "permissions" ("created_at", "name", "profile_image_url", "provider", "token", "token_secret", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-08-13 16:49:11.878107"], ["name", "Nicholas H"], ["profile_image_url", "http://pbs.twimg.com/profile_images/2671435397/fc6a483429c57e7f7927bef66716c2ff_normal.png"], ["provider", "twitter"], ["token", "12782922-asTgKSYGg0ylfBGRfWdLwjprFqTJrtQWv8tNGR5Nl"], ["token_secret", "FnCkg99LvTP9W7linKFo3UzhrG3Oe12bd7SnLs2A22vgx"], ["uid", "12782922"], ["updated_at", "2014-08-13 16:49:11.878107"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  Rendered permission/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 92ms (Views: 12.9ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-13 17:49:11 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-13 17:49:12 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-13 17:49:12 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-13 17:49:12 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-13 17:49:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-13 17:49:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-13 17:49:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-13 17:49:12 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-13 17:49:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-13 17:49:12 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-13 17:49:25 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.6ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (33.8ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (undefined method `permission_path' for #<#<Class:0x007fcd6ed37e10>:0x007fcd6eb6e958>):
+    20: 				<td><%= permission.name %></td>
+    21: 				<td><%= image_tag "#{permission.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= permission.url %></td>
+    23: 				<td><%= link_to "Destroy", permission, :confirm => 'Are you sure?', :method => :delete %></td>
+    24: 			</tr>
+    25: 		<% end %>
+    26: 	</table>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb___2317024240118950335_70260151248980'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb___2317024240118950335_70260151248980'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.6ms)
