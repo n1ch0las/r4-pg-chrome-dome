@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :permissions
   get '/auth/:provider/callback', to: 'permissions#create'
+  #resources :permissions, :only => [:index, :create, :destroy]
   devise_for :users
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.

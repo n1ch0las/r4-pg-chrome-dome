@@ -41,9 +41,12 @@ gem 'spring',        group: :development
 # Heroku requirement
 gem 'rails_12factor', group: :production
 
-# Devise
+# Devise user account control
 gem 'devise'
 
 # OAuth solutions
 gem 'omniauth'
 gem 'omniauth-twitter'
+
+# Specify Ruby version for Heroku
+ruby '2.1.2'
