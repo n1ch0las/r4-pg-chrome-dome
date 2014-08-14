@@ -9463,3 +9463,476 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-14 18:01:59 
 
 
 Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-14 18:01:59 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:27:31 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.4ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (319.5ms)
+Completed 200 OK in 381ms (Views: 354.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/assets/twitter_64.png" for 127.0.0.1 at 2014-08-14 18:27:32 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-14 18:27:38 +0100
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2014-08-14 18:27:40 +0100
+
+
+Started GET "/auth/twitter/callback?oauth_token=iHrg8M3lqynfgEAnXLmoz2lKjgHsVHqtL5SRFvyfZ0&oauth_verifier=nIlgcjBSu7xWMjn2uLJQYaImXpbG8WjDCZdkQV7HdA" for 127.0.0.1 at 2014-08-14 18:27:46 +0100
+Processing by PermissionController#create as HTML
+  Parameters: {"oauth_token"=>"iHrg8M3lqynfgEAnXLmoz2lKjgHsVHqtL5SRFvyfZ0", "oauth_verifier"=>"nIlgcjBSu7xWMjn2uLJQYaImXpbG8WjDCZdkQV7HdA", "provider"=>"twitter"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Load (18.7ms)[0m  SELECT  "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1 AND "permissions"."provider" = 'twitter' AND "permissions"."uid" = '12782922' LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.8ms)[0m  INSERT INTO "permissions" ("created_at", "name", "profile_image_url", "provider", "token", "token_secret", "uid", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-08-14 17:27:48.366585"], ["name", "Nicholas H"], ["profile_image_url", "http://pbs.twimg.com/profile_images/2671435397/fc6a483429c57e7f7927bef66716c2ff_normal.png"], ["provider", "twitter"], ["token", "12782922-asTgKSYGg0ylfBGRfWdLwjprFqTJrtQWv8tNGR5Nl"], ["token_secret", "FnCkg99LvTP9W7linKFo3UzhrG3Oe12bd7SnLs2A22vgx"], ["uid", "12782922"], ["updated_at", "2014-08-14 17:27:48.366585"], ["user_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/permission/index
+Completed 302 Found in 274ms (ActiveRecord: 37.9ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:27:48 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (7.3ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (503.0ms)
+Completed 500 Internal Server Error in 549ms
+
+ActionView::Template::Error (undefined local variable or method `permission' for #<#<Class:0x007ffddb6469d8>:0x007ffddb77d040>):
+    20: 				<td><%= p.name %></td>
+    21: 				<td><%= image_tag "#{p.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= p.url %></td>
+    23: 				<td><%= link_to "Show", permission %></td>
+    24: 				<td><%= link_to "Remove", permission_destroy_path(:id => p.id), :confirm => 'Are you sure?', :method => :delete %></td>
+    25: 			</tr>
+    26: 		<% end %>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb__871046118075753113_70364125971620'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb__871046118075753113_70364125971620'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (56.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (118.0ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:28:16 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.4ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (310.9ms)
+Completed 500 Internal Server Error in 328ms
+
+ActionView::Template::Error (undefined local variable or method `permission_path' for #<#<Class:0x007ffddb6469d8>:0x007ffddb6055f0>):
+    20: 				<td><%= p.name %></td>
+    21: 				<td><%= image_tag "#{p.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= p.url %></td>
+    23: 				<td><%= link_to "Show", permission_path %></td>
+    24: 				<td><%= link_to "Remove", permission_destroy_path(:id => p.id), :confirm => 'Are you sure?', :method => :delete %></td>
+    25: 			</tr>
+    26: 		<% end %>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb__871046118075753113_70364141977420'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb__871046118075753113_70364141977420'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.2ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:28:56 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (16.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.3ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (252.7ms)
+Completed 500 Internal Server Error in 276ms
+
+ActionView::Template::Error (undefined local variable or method `permission_show' for #<#<Class:0x007ffddb6469d8>:0x007ffdd8fe9218>):
+    20: 				<td><%= p.name %></td>
+    21: 				<td><%= image_tag "#{p.profile_image_url}", :size => "32x32" %></td>
+    22: 				<td><%= p.url %></td>
+    23: 				<td><%= link_to "Show", permission_show %></td>
+    24: 				<td><%= link_to "Remove", permission_destroy_path(:id => p.id), :confirm => 'Are you sure?', :method => :delete %></td>
+    25: 			</tr>
+    26: 		<% end %>
+  app/views/permission/index.html.erb:23:in `block in _app_views_permission_index_html_erb__871046118075753113_70364121992200'
+  app/views/permission/index.html.erb:15:in `_app_views_permission_index_html_erb__871046118075753113_70364121992200'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (22.6ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.2ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.4ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (81.8ms)
+Completed 200 OK in 116ms (Views: 101.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/assets/twitter_64.png" for 127.0.0.1 at 2014-08-14 18:29:15 +0100
+
+
+Started GET "/permission/show" for 127.0.0.1 at 2014-08-14 18:29:18 +0100
+Processing by PermissionController#show as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered permission/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:31:02 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered permission/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 8ms
+
+SyntaxError (/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;		 end 
+         		    ^
+/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 	
+             ^
+/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/O_v_O/Dropbox/git/rails_projects/r4-pg-iron-dome/app/views/permission/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/permission/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+  app/views/permission/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+  app/views/permission/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/permission/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.3ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (74.3ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.4ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/twitter_64.png" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:21 +0100
+
+
+Started GET "/permission/show" for 127.0.0.1 at 2014-08-14 18:31:23 +0100
+Processing by PermissionController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered permission/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-14 18:31:27 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sgdzmoLM0YH/zk1CXEkfI0qjwTcwlAGYUPum5Bd79Pk="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:34:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.7ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.6ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (1.6ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/assets/twitter_64.png" for 127.0.0.1 at 2014-08-14 18:31:41 +0100
+
+
+Started GET "/permission/show" for 127.0.0.1 at 2014-08-14 18:31:43 +0100
+Processing by PermissionController#show as HTML
+  [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered permission/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 10.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+Processing by PermissionController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPermission Exists (0.4ms)[0m  SELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1mSELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 21ms (Views: 14.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/assets/twitter_64.png" for 127.0.0.1 at 2014-08-14 18:32:49 +0100
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.3ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 46ms (Views: 30.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started GET "/assets/twitter_64.png" for 127.0.0.1 at 2014-08-14 18:33:02 +0100
+
+
+Started DELETE "/permission/destroy" for 127.0.0.1 at 2014-08-14 18:33:05 +0100
+Processing by PermissionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sgdzmoLM0YH/zk1CXEkfI0qjwTcwlAGYUPum5Bd79Pk="}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Permission without an ID):
+  app/controllers/permission_controller.rb:34:in `destroy'
+
+
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.8ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.9ms)
+  Rendered /Users/O_v_O/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (56.4ms)
+
+
+Started GET "/permission/index" for 127.0.0.1 at 2014-08-14 18:34:04 +0100
+Processing by PermissionController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPermission Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "permissions"  WHERE "permissions"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mPermission Load (0.3ms)[0m  SELECT "permissions".* FROM "permissions"  WHERE "permissions"."user_id" = $1  [["user_id", 1]]
+  Rendered permission/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 36ms (Views: 14.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-14 18:34:04 +0100
+
+
+Started GET "/assets/permission.css?body=1" for 127.0.0.1 at 2014-08-14 18:34:04 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-14 18:34:04 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-14 18:34:04 +0100
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-08-14 18:34:04 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-14 18:34:04 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-14 18:34:04 +0100
+
+
+Started GET "/assets/permission.js?body=1" for 127.0.0.1 at 2014-08-14 18:34:04 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-14 18:34:05 +0100
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-08-14 18:34:05 +0100
+
+
+Started GET "/assets/twitter_64.png" for 127.0.0.1 at 2014-08-14 18:34:05 +0100
+
+
+Started GET "/permission/show?id=5" for 127.0.0.1 at 2014-08-14 18:34:08 +0100
+Processing by PermissionController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered permission/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.7ms)
