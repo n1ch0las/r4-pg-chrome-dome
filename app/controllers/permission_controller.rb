@@ -4,6 +4,9 @@ class PermissionController < ApplicationController
     @permissions = current_user.permissions
   end
 
+  def show
+  end
+  
   def create
     auth = request.env['omniauth.auth']
     permission = current_user.permissions.find_by_provider_and_uid(
